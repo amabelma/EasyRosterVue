@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import NavigationTable from '@/components/navigation-table.vue'
+import NavigationTable from '@/components/NavigationTable.vue'
 
 export default {
   name: 'home',
