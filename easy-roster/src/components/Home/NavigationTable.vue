@@ -1,6 +1,7 @@
 <template>
-  <div class="hello">
-    <v-btn large color="primary">Upload Player Information</v-btn>
+  <div>
+    <v-btn large color="red">Create Player Rankings</v-btn>
+    <v-btn large color="blue">Generate Roster</v-btn>
   </div>
 </template>
 

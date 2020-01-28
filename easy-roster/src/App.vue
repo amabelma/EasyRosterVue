@@ -1,27 +1,15 @@
 <template>
-  <v-app>
-    
-    <HeaderBar/>
-    <v-content>
-      <NavigationTable/>
-    </v-content>
-  </v-app>
+  <div id="app">
+    <div class="main-section columns">
+      <main class="column">
+        <router-view />
+      </main>
+    </div>
+  </div>
 </template>
 
 <script>
-import HeaderBar from './components/Header/HeaderBar';
-import NavigationTable from './components/NavigationTable';
-
 export default {
   name: 'App',
-
-  components: {
-    NavigationTable,
-    HeaderBar,
-  },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
