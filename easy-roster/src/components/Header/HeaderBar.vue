@@ -1,37 +1,18 @@
 <template>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        Welcome to EasyRoster! 
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+  <div class="theme_easy-roster">
+    <v-app-bar app color="primary" dark>
+      <v-btn text>Step 1: Upload Players</v-btn>
+      <v-btn text>Step 2: Rank Players</v-btn>
+      <v-btn text>Step 3: Set Rules</v-btn>
+      <v-btn text>Step 4: Generate Roster</v-btn>
+      <v-btn text>Step 5: Review Roster</v-btn>
+      <v-btn text>Step 6: Download</v-btn>
     </v-app-bar>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'HeaderBar',
-}
+  name: "HeaderBar"
+};
 </script>

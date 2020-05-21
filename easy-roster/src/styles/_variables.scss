@@ -1,0 +1,27 @@
+$black: #000000;
+$white: #ffffff;
+$off-white: #f6f6f6;
+$off-white-darker: darken(#f6f6f6, 10%);
+$grey: #7f7f7f;
+$grey-darkest: darken($grey, 37.5%);
+$grey-darker: darken($grey, 25%);
+$grey-dark: darken($grey, 12.5%);
+$grey-light: lighten($grey, 12.5%);
+$grey-lighter: lighten($grey, 25%);
+$grey-lightest: lighten($grey, 37.5%);
+$grey-horizontal-rule: #e1e1e1;
+$green-active: #71bf87;
+$green-active-winner: #ceffcc;
+$green-unlocked: #cfffcc;
+$red-danger: #ff2f30;
+$red-locked: #ff6969;
+$red-locked-countdown-lock: #b71c1c;
+$red-locked-countdown: lighten($red-locked-countdown-lock, 25%);
+$red-locked-countdown-warn: lighten($red-locked-countdown-lock, 12.5%);
+$red-button: #8b4040;
+$blue-grey: #b0bac6;
+$black-background: #171717;
+$blue-grey: #b0bac6;
+$blue-grey-dark: #111e30;
+
+$font-size-default: 14px;

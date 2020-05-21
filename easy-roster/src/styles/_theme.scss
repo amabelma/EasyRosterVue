@@ -1,0 +1,420 @@
+@import './variables';
+
+.field {
+  &-title {
+    font-weight: 500;
+  }
+}
+.v-card, table, .v-list {
+  border-color: $off-white-darker !important;
+}
+.v-input__slot {
+  min-height: inherit !important;
+}
+.theme {
+  &_easy-roster {
+    vue-app-bar {
+      display: flex;
+      width: 100%;
+    }
+    hr {
+      border-color: $grey;
+    }
+    a.theme {
+      color: $blue-grey;
+      text-decoration: none;
+      &.underlined {
+        text-decoration: underline;
+      }
+    }
+    .v-input--selection-controls__input {
+      .v-input--selection-controls__ripple.accent--text {
+        color: $blue-grey !important;
+      }
+      .v-icon {
+        color: $blue-grey !important;
+        caret-color: $blue-grey !important;
+        &.mdi-checkbox-blank-outline {
+          color: $grey-darkest !important;
+        }
+      }
+    }
+    &.clickable-text {
+      cursor: pointer;
+      color: $grey-lightest;
+      transition: color 0.1s ease;
+      &:hover {
+        color: $white;
+      }
+    }
+    & > hr {
+      border: none;
+      border-top: 1px solid $grey-horizontal-rule;
+    }
+    button {
+      &.btn-ezr {
+        padding: 1rem 3rem !important;
+        height: auto !important;
+        text-transform: uppercase;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        letter-spacing: 1px;
+        transition: background 0.2s ease;
+        &-primary {
+          background: $blue-grey-disabled;
+          color: $white;
+          &:hover {
+            background: $blue-grey;
+          }
+          &.no-hover {
+            background: $blue-grey;
+            &.override-bg-color {
+              background-color: $blue-grey !important;
+            }
+          }
+          &.slim {
+            padding: 1rem 2rem !important;
+          }
+          &.center {
+            align-self: center;
+          }
+        }
+        &-default {
+          background: $grey-lightest;
+          color: $grey-dark;
+          &:hover {
+            background: $grey-lighter;
+          }
+        }
+        &-dark {
+          background: $blue-grey-dark;
+          color: $white;
+          font-weight: 500;
+          letter-spacing: 2px;
+          padding: 1rem 3rem !important;
+          height: auto !important;
+        }
+      }
+    }
+    &.v-input.v-text-field {
+      label.v-label {
+        padding-left: 0.66rem;
+        font-size: 0.8rem;
+      }
+    }
+    & div.v-input.v-text-field div.v-input__slot {
+      background: $off-white;
+      border-top-left-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+    }
+    // Style vuetify chips within themed container
+    & span.v-chip.v-chip--no-color {
+      background: $blue-grey;
+      border-radius: 0.25rem;
+      color: $white;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    // Style vuetify tablist
+    &.v-tabs-items.v-window > .v-window__container {
+      display: flex;
+      flex-grow: 1;
+      & > .v-window-item, & > .v-window-item > .v-card {
+        display: flex;
+        flex-grow: 1;
+        & > :first-child {
+          border-top-left-radius: 0rem !important;
+          
+        }
+      }
+    }
+    &.v-tabs {
+      .v-tabs-slider {
+        display: none;
+      }
+      & > div.v-tabs-bar {
+        background-color: $off-white;
+        a.v-tab {
+          border-top-left-radius: 0.33rem;
+          border-top-right-radius: 0.33rem;
+          text-transform: capitalize !important;
+          color: $grey-light !important;
+          i {
+            display: none !important;
+          }
+          &--active {
+            background-color: #b0bac6;
+            color: $grey-darkest !important;
+          }
+        }
+      }
+    }
+    // Style vuetify switch selection controls
+    &.v-input.v-input--selection-controls.v-input--switch {
+      display: flex;
+      justify-content: center;
+      height: 4rem;
+
+      & > div.v-input__control {
+        display: flex;
+        width: 10rem;
+        height: 100%;
+
+        & > div.v-input__slot {
+          display: flex;
+          width: 100%;
+          height: 100%;          
+
+          & > label.v-label {
+            display: inline-block;
+            justify-self: flex-end;
+            position: absolute !important;
+            top: auto !important;
+            right: 1.5rem !important;
+            bottom: auto !important;
+            left: auto !important;
+            color: $grey-lightest;
+            text-transform: uppercase;
+          }
+
+          & > div.v-input--selection-controls__input {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+
+            & > * {
+              display: inline-block;
+              position: absolute; 
+              top: initial;
+              right: initial;
+              bottom: initial;
+              left: initial;
+              margin: 0rem;
+              padding: 0rem;
+              height: 100%;
+            }
+
+            input[type="checkbox"][role="switch"] {
+              width: 0rem;
+              opacity: 0;
+            }
+
+            .v-input--selection-controls__ripple {  
+              border-radius: 2rem;
+              width: 50%;
+
+              &::before {
+                background: $green-active;
+                opacity: 0.2;
+              }
+
+              & > span.v-ripple__container {
+                background-color: $grey;
+                opacity: 0.2;
+              }
+            }
+
+            .v-input--switch__track {
+              background-color: $grey;
+              border-radius: 2rem;
+              width: 100%;
+              opacity: 1;
+            }
+
+            .v-input--switch__thumb {
+              background-color: $grey-dark;
+              border-radius: 2rem;
+              width: 50%;
+            }
+          }
+        }
+      }
+
+      // Change colors and thumb positioning on active
+      &.v-input--is-label-active {
+        & > div.v-input__control {
+          & > div.v-input__slot {
+            & > label.v-label {
+              right: auto !important;
+              left: 1.5rem !important;
+            }
+
+            & > div.v-input--selection-controls__input {
+              justify-content: flex-end;
+
+              .v-input--selection-controls__ripple {  
+                & > span.v-ripple__container {
+                  background-color: $green-active;
+                  left: -17.5%;
+                }
+              }
+
+              .v-input--switch__track {
+                background-color: $green-active;
+              }
+
+              .v-input--switch__thumb {
+                right: 1rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      &--reverse {
+        & > div.v-input__control {
+          & > div.v-input__slot {
+            & > label.v-label {
+              right: auto !important;
+              left: 1.5rem !important;
+            }
+  
+            & > div.v-input--selection-controls__input {
+              justify-content: flex-end;
+            }
+          }
+        }
+  
+        // Change colors and thumb positioning on active
+        &.v-input--is-label-active {
+          & > div.v-input__control {
+            & > div.v-input__slot {
+              & > label.v-label {
+                right: 1.5rem !important;
+                left: auto !important;
+              }
+  
+              & > div.v-input--selection-controls__input {
+                justify-content: flex-start;
+
+                .v-input--selection-controls__ripple {  
+                  & > span.v-ripple__container {
+                    background-color: $green-active;
+                    left: -30%;
+                  }
+                }
+              }
+
+              .v-input--switch__thumb {
+                right: auto !important;
+                left: -1.5rem !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_dark {
+      & > hr {
+        border-top: 1px solid $grey-horizontal-rule;
+      }
+      // Style vuetify switch selection controls
+      &.v-input.v-input--selection-controls.v-input--switch {
+        & > div.v-input__control {
+          & > div.v-input__slot {
+            & > label.v-label {
+              color: $grey-lightest;
+            }
+  
+            & > div.v-input--selection-controls__input {
+              .v-input--selection-controls__ripple {
+                &::before {
+                  background: $green-active;
+                }
+  
+                & > span.v-ripple__container {
+                  background-color: $grey;
+                }
+              }
+  
+              .v-input--switch__track {
+                background-color: $grey-dark;
+              }
+  
+              .v-input--switch__thumb {
+                background-color: $grey-darkest;
+              }
+            }
+          }
+        }
+  
+        // Change colors and thumb positioning on active
+        &.v-input--is-label-active {
+          & > div.v-input__control {
+            & > div.v-input__slot {
+              & > div.v-input--selection-controls__input {
+                .v-input--selection-controls__ripple {  
+                  & > span.v-ripple__container {
+                    background-color: $green-active;
+                  }
+                }
+  
+                .v-input--switch__track {
+                  background-color: $green-active;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &_light {
+      // Style vuetify switch selection controls
+      &.v-input.v-input--selection-controls.v-input--switch {
+        & > div.v-input__control {
+          & > div.v-input__slot {
+            & > label.v-label {
+              color: $grey-lightest;
+            }
+  
+            & > div.v-input--selection-controls__input {
+              .v-input--selection-controls__ripple {
+                &::before {
+                  background: $green-active;
+                }
+  
+                & > span.v-ripple__container {
+                  background-color: $grey;
+                }
+              }
+  
+              .v-input--switch__track {
+                background-color: $black;
+              }
+  
+              .v-input--switch__thumb {
+                background-color: $grey-lightest;
+              }
+            }
+          }
+        }
+  
+        // Change colors and thumb positioning on active
+        &.v-input--is-label-active {
+          & > div.v-input__control {
+            & > div.v-input__slot {
+              & > div.v-input--selection-controls__input {
+                .v-input--selection-controls__ripple {  
+                  & > span.v-ripple__container {
+                    background-color: $green-active;
+                  }
+                }
+  
+                .v-input--switch__track {
+                  background-color: $green-active;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
